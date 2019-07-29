@@ -1,0 +1,579 @@
+/***************************************
+
+Design and coded by Russell John Gapasin
+Author URL: www.rjgapasin.com
+
+****************************************/
+
+@font-face {
+    font-family: 'Komoda';
+    src: url('../fonts/Komoda-Regular.woff2') format('woff2'),
+         url('../fonts/Komoda-Regular.woff') format('woff'),
+         url('../fonts/Komoda.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ikaros Light';
+    src: url('../fonts/Ikaros-Light.woff2') format('woff2'),
+         url('../fonts/Ikaros-Light.woff') format('woff'),
+         url('../fonts/Ikaros-Light.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ikaros Regular';
+    src: url('../fonts/Ikaros-Regular.woff2') format('woff2'),
+         url('../fonts/Ikaros-Regular.woff') format('woff'),
+         url('../fonts/Ikaros.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Ikaros Light';
+  color: #eee;
+  -webkit-background-color: #fbfbfb;
+  background-color: #fbfbfb;
+  font-size: 1em;
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Komoda';
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  line-height: 1.5;
+}
+p {
+  font-family: 'Ikaros Light';
+  letter-spacing: 2px;
+  line-height: 1.4;
+  font-size: 1.2em;
+}
+a {
+  text-decoration: none !important;
+  color: #eee;
+}
+a:hover {
+  color: #999;
+}
+.bgcolor-primary {
+  -webkit-background-color: #15321f;
+  background-color: #15321f;
+  color: #eee;
+}
+.bgcolor-secondary {
+  -webkit-background-color: #eee;
+  background-color: #eee;
+  color: #15321f;
+}
+.color-primary {
+  color: #eee;
+}
+.color-secondary {
+  color: #15321f;
+}
+.heading {
+  color: #15321f;
+}
+.center {
+  text-align: center !important;
+}
+.left {
+  text-align: left !important;
+}
+.right {
+  text-align: right !important;
+}
+.justify {
+  text-align: justify !important;
+}
+.subheading {
+  text-transform: uppercase;
+  text-align: center !important;
+  font-size: 0.9em;
+}
+#map {
+	width: 100%;
+	height: 320px;
+}
+@media (max-width: 992px) { .rellax { transform: translate3d(0,0,0) !important; } }
+
+/* animation */
+@-webkit-keyframes fadeInLeftShort {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+    transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInLeftShort {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+    transform: translate3d(-10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes fadeInRightShort {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(10%, 0, 0);
+    transform: translate3d(10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInRightShort {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(10%, 0, 0);
+    transform: translate3d(10%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes arrowDown {
+  0%   {transform: translateY(-5px);}
+  50%  {transform: translateY(5px);}
+  100%  {transform: translateY(0px);}
+}
+@keyframes arrowDown {
+  0%   {transform: translateY(-5px);}
+  50%  {transform: translateY(5px);}
+  100%  {transform: translateY(0px);}
+}
+.fadeInLeftShort {
+  -webkit-animation-name: fadeInLeftShort;
+  animation-name: fadeInLeftShort;
+}
+.fadeInRightShort {
+  -webkit-animation-name: fadeInRightShort;
+  animation-name: fadeInRightShort;
+}
+.delay-300ms {
+  animation-delay: 0.3s;
+}
+.delay-400ms {
+  animation-delay: 0.4s;
+}
+.delay-500ms {
+  animation-delay: 0.5s;
+}
+.delay-600ms {
+  animation-delay: 0.6s;
+}
+.delay-700ms {
+  animation-delay: 0.7s;
+}
+.delay-800ms {
+  animation-delay: 0.8s;
+}
+
+/* form style */
+form {
+  margin-top: 25px;
+}
+form input{
+  width: 100%;
+  padding: 12px;
+  display: block;
+  letter-spacing: 2px;
+  border: 1px solid #15321f;
+  outline: none;
+}
+form textarea {
+  width: 100%;
+  padding: 12px;
+  display: block;
+  letter-spacing: 2px;
+  border: 1px solid #15321f;
+  outline: none;
+}
+form input:focus, form textarea:focus {
+  outline: 3px solid #15321f;
+}
+.btn {
+  display: block !important;
+  margin-top: 25px;
+  border-radius: 0 !important;
+  padding: 15px 40px !important;
+}
+.button-primary {
+  -webkit-background-color: #398158 !important;
+  background-color: #398158 !important;
+  color: #fff !important;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Ikaros Light';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button-primary:hover {
+  transform: translateY(-3px);
+  filter: brightness(80%);
+  color: #eee !important;
+}
+.button-secondary {
+  -webkit-background-color: transparent !important;
+  background-color: transparent !important;
+  color: #398158 !important;
+  border: 2px solid #398158;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Ikaros Light';
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.button-secondary:hover {
+  transform: translateY(-3px);
+  -webkit-background-color: #398158 !important;
+  background-color: #398158 !important;
+  color: #eee !important;
+}
+.button-small {
+  padding: 10px 20px !important;
+}
+
+.home, .subscription, .contact, .menu-section, .story, .drink {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.overlay {
+  position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  -webkit-background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 0;
+}
+.overlay-dark {
+  position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  -webkit-background-color: rgba(23, 37, 42, 0.85);
+  background-color: rgba(23, 37, 42, 0.85);
+	z-index: 0;
+}
+
+/* navbar */
+nav {
+  font-family: 'Ikaros Light' !important;
+  font-size: 1em;
+}
+@media only screen and (min-width: 768px) {
+  .navbar img {
+    width: 40%;
+  }
+  .navbar-brand {
+    margin-left: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar img {
+    width: 110%;
+  }
+}
+.navbar-nav .nav-link:hover {
+  border-bottom: 3px solid #398158;
+  transition: 0.3s ease;
+}
+.navbar-toggler {
+  padding: .50rem 1rem !important;
+  border-radius: 0px !important;
+  outline: none !important;
+}
+.navbar-brand {
+	width: 40%;
+}
+
+/* modal */
+.modal-body {
+  -webkit-background: url('../img/patterns/TC_pattern_B.jpg') 20% 0 repeat fixed;
+  background: url('../img/patterns/TC_pattern_B.jpg') 20% 0 repeat fixed;
+  -webkit-background-size: contain;
+  background-size: contain;
+}
+.modal-body p {
+  z-index: 2;
+}
+.modal .btn {
+  font-size: 1em;
+  margin: 0;
+}
+.modal-body-content .close {
+  opacity: 1 !important;
+  float: none;
+}
+.modal-body-content {
+  -webkit-background-color: rgba(238, 238, 238, 0.75);
+  background-color: rgba(238, 238, 238, 0.75);
+  border: 6px double #17252a;
+  color: #1a1a1d;
+}
+
+/* carousel */
+.carousel {
+  height: 100vh !important;
+}
+.carousel-item {
+  height: 100vh !important;
+  width: 100%;
+}
+.carousel-content {
+  -webkit-background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 4px groove #eee;
+  margin-top: 30vh;
+  padding: 50px;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 7% !important;
+}
+#image1 {
+  background: url('../img/background/unsplash_img21.gif') 50% 0 no-repeat fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  height: 100vh;
+}
+#image2 {
+  background: url('../img/background/unsplash_img9.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center;
+  -webkit-background-attachment: fixed;
+  -webkit-background-size: cover;
+  height: 100vh;
+}
+#image3 {
+  background: url('../img/background/unsplash_img4.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-position: center;
+  -webkit-background-attachment: fixed;
+  -webkit-background-size: cover;
+  height: 100vh;
+}
+
+/* story */
+.story {
+  -webkit-background: url('../img/background/unsplash_img11.jpg') 50% 0 no-repeat;
+  background: url('../img/background/unsplash_img11.jpg') 50% 0 no-repeat;
+  -webkit-background-size: cover;
+  -webkit-background-position: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  color: #eee;
+  padding: 100px 0;
+}
+.story a i:hover {
+  -webkit-animation-name: arrowDown;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in;
+  animation-name: arrowDown;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+/* about */
+.about {
+  position: relative;
+  -webkit-background-color: #fff;
+  background-color: #fff;
+  color: #15321f;
+}
+.about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about-content {
+  padding: 5rem 1.5rem;
+}
+.about-content p{
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* menu */
+.menu {
+  position: relative;
+  -webkit-background-color: #fff;
+  background-color: #fff;
+  color: #15321f;
+}
+.side-image {
+  height: 550px;
+  max-height: 550px;
+}
+.menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu p {
+  line-height: 1.5;
+  /* padding: 20px 50px; */
+}
+/* .menu-section {
+  position: relative;
+} */
+.drink {
+  background-color: #fff;
+  -webkit-background-color: #fff;
+  color: #15321f;
+}
+.drink p {
+  line-height: 1.8;
+  /* padding: 20px 30px; */
+  padding: 0 3rem;
+}
+.drink img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.menu-drinks-section {
+  margin-top: 40px;
+  padding: 0 70px;
+}
+.drinks-category {
+  border: 5px double #15321f;
+  color: #15321f;
+  padding: 12px;
+  margin-bottom: 60px;
+  width: 60%;
+}
+.drinks {
+  margin-bottom: 40px;
+}
+.drinks-name {
+  color: #1a1a1d;
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 0.8 !important;
+}
+.drinks-info {
+  color: #999;
+  font-size: 1em;
+  line-height: 0.8 !important;
+}
+
+/* contact */
+.contact {
+  -webkit-background-color: #17252a;
+  background-color: #17252a;
+  color: #eee;
+  position: relative;
+  width: 100%;
+}
+
+/* subscription */
+.subscription {
+  -webkit-background: url('../img/background/unsplash_img1.jpg');
+  background: url('../img/background/unsplash_img1.jpg');
+  color: #eee;
+  position: relative;
+  -webkit-background-size: cover;
+  -webkit-background-position: center;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+/* footer */
+footer {
+  -webkit-background-color: #15321f;
+  background-color: #15321f;
+  /* color: #C5AE9E; */
+  padding: 40px 0;
+}
+footer p {
+  font-size: 1.1em;
+}
+.footer-subsection {
+  padding: 30px 20px;
+}
+footer h3 {
+  font-size: 2.5em;
+}
+
+/* social icons */
+.social-icon {
+  padding: 0;
+}
+.social-icon li {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+.social-icon li a {
+  -webkit-background: #fff;
+  background: #fff;
+  border-radius: 50%;
+  border: 1px solid #5c5c5c;
+  color: #15321f;
+  font-size: 14px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  margin-top: 12px;
+  margin-right: 16px;
+  top: 0;
+  position: relative;
+  padding: 0;
+}
+.social-icon li a:hover {
+  transform: translateY(-5px);
+  filter: brightness(80%);
+}
+
+/* copyright section */
+.copyright {
+  -webkit-background-color: #1a1a1d;
+  background-color: #1a1a1d;
+  color: #eee;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.8em;
+}
+.copyright .heading {
+  font-size: 1.8em !important;
+}

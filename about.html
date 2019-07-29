@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Tell Camellia | Tea Infused Cocktail Bar in Central, Hong Kong">
+    <meta name="keywords" content="tell camellia, tea, cocktail bar, central, hong kong">
+    <meta name="description" content="Country based tea cocktail bar">
+  	<meta property="og:locale" content="en_US"/>
+  	<meta property="og:type" content="website"/>
+  	<meta property="og:title" content="Tell Camellia | Tea Infused Cocktail Bar in Central, Hong Kong"/>
+  	<meta property="og:description" content="Country based tea cocktail bar"/>
+  	<meta property="og:url" content="https://www.tellcamellia.com/index.html"/>
+  	<meta property="og:site_name" content="Tell Camellia | Tea Infused Cocktail Bar in Central, Hong Kong"/>
+
+    <title>Tell Camellia | Tea Infused Cocktail Bar</title>
+    <link rel="apple-touch-icon" href="img/tell_camellia_icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="img/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
+    <link rel="manifest" href="img/icon/manifest.json">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <a class="navbar-brand" href="index.html"><img src="img/icon/tell_camellia_logo2.png" alt="Tell Camellia Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto mr-5">
+        <li class="nav-item mr-4">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link" href="#about.html">About</a>
+        </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link" href="#menu.html">Menu</a>
+        </li>
+        <li class="nav-item mr-4">
+          <a class="nav-link" href="#contact.html">Contact</a>
+        </li>
+    </div>
+  </nav>
+
+
+  <footer class="center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 footer-subsection">
+          <img src="img/icon/tell_camellia_logo2.png" alt="Tell Camellia Logo" width="90%">
+          <p>H Code, LG / Floor, 45 Pottinger Street, Central</p>
+          <a href="mailto:info@tellcamellia.com"><p><i class="far fa-envelope"></i> info@tellcamellia.com</p></a>
+        </div>
+        <div class="col-md-4 col-sm-12 footer-subsection">
+          <h3>Opening Hours</h3>
+          <p>
+             Monday - Saturday <br/>
+             6:00 PM - 1:00 AM<br/>
+             Sunday closed<br/>
+         </p>
+        </div>
+        <div class="col-md-4 col-sm-12 footer-subsection">
+          <h3>Connect with us</h3>
+          <div class="social-icon">
+            <ul>
+              <li><a href="https://www.facebook.com/tellcamellia" class="fab fa-facebook-f"></a></li>
+              <li><a href="https://www.instagram.com/tellcamellia" class="fab fa-instagram"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <section class="copyright">
+  	<div class="container">
+  	  <div class="row">
+    		<div class="col-md-12 col-sm-12">
+    		  <p>Copyright © Tell Camellia Cocktail Bar</p>
+    		</div>
+      </div>
+  	</div>
+  </section>
+
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.js"></script>
+  <script src="js/jquery.parallax.min.js" async defer></script>
+  <script src="js/smoothscroll.js" async defer></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" async defer></script>
+  <script src="js/form-validation.min.js" async defer></script>
+  <script src="js/myscript.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Ec_tiMlqdpz4q2MImVvq1VUha1jtPnU&callback=initMap"
+  async defer></script>
+  <script>
+  	var scroll_start = 0;
+  	var x = $('#carousel').outerHeight();
+  	$(document).scroll(function(){
+  		scroll_start = $(this).scrollTop() + 80;
+  		if (scroll_start < x) {
+  			$('nav').css('background-color', 'transparent');
+  		}else {
+  			$('nav').css('background-color', '#17252a');
+  		}
+  	});
+  </script>
+  </body>
+</html>
+
