@@ -1,9 +1,14 @@
+// preloader
+$(window).load('', function(){
+    $('.preloader').fadeOut(500); // set duration in brackets
+});
+
 // ------- GOOGLE MAP ---- //
 let map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 22.2822323, lng: 114.1524102},
-    zoom: 18
+    center: { lat: 22.2822323, lng: 114.1524102 },
+    zoom: 20
   });
 
   const contentString = '<p class="color-secondary subheading">H CODE, LG / FLOOR, 45 POTTINGER STREET, CENTRAL</p>';
@@ -14,7 +19,7 @@ function initMap() {
   });
 
   let marker = new google.maps.Marker({
-      position: {lat: 22.2822323, lng: 114.1524102},
+      position: { lat: 22.2822323, lng: 114.1524102 },
       icon: 'img/icon/tell_camellia_marker.png',
       title: "Tell Camellia"
   });
@@ -32,6 +37,8 @@ $(function() {
   // ------- Carousel ---- //
   $('.carousel').carousel({
     touch: true,
+    interval: 3000,
+    pause: false,
   });
 
   // ------- AOS animation ------ //
@@ -56,6 +63,9 @@ $(function() {
     $('#image1').parallax("100%", 0.2);
     $('#image2').parallax("100%", 0.2);
     $('#image3').parallax("100%", 0.2);
+    $('#aboutUs').parallax("100%", 0.1);
+    $('#menu').parallax("100%", 0.1);
+    $('#contact').parallax("100%", 0.1);
   }
   if (window.innerWidth > 800 && window.innerHeight > 600) {
     initParallax();
@@ -72,11 +82,11 @@ $(function() {
   const invalidTypeMessage = '<p>Please provide valid context!</p>';
 
   // ------- Subscription form ---- //
-  $('#subscription').submit(async (e) =>{
+  $('#subscription').submit(function(e){
     e.preventDefault();
     let $form = $(this);
     const email = $form.find("input[name='email']").val();
-    const validate = await validation.validateSubscription(email);
+    const validate = validation.validateSubscription(email);
     // clear modal appended modal messages
     $('#modal-message').empty();
 
@@ -108,13 +118,13 @@ $(function() {
   });
 
   // ------- Message form ---- //
-  $('#message').submit(async (e) =>{
+  $('#message').submit(function(e){
     e.preventDefault();
     let $form = $(this);
     const name = $form.find("input[name='name']").val();
     const email = $form.find("input[name='email2']").val();
     const message = $form.find("textarea[name='message']").val();
-    const validate = await validation.validateMessage(name, email, message);
+    const validate = validation.validateMessage(name, email, message);
     // clear modal appended modal messages
     $('#modal-message').empty();
 
