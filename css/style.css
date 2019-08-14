@@ -399,7 +399,6 @@ form input:focus, form textarea:focus {
   }
 }
 
-
 /* navbar */
 .navbar {
   font-family: 'Ikaros Light' !important;
@@ -488,33 +487,24 @@ form input:focus, form textarea:focus {
   width: 7% !important;
 }
 #image1 {
-  background: url('../img/background/unsplash_img21.jpg') 50% 0 no-repeat fixed;
+  background-image: url('../img/background/unsplash_img21.jpg');
+  background-position: center;
+  background-attachment: fixed;
   background-size: cover;
-  -webkit-background-size: cover;
   height: 100vh;
 }
 #image2 {
-  background: url('../img/background/unsplash_img9.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../img/background/unsplash_img9.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  -webkit-background-repeat: no-repeat;
-  -webkit-background-position: center;
-  -webkit-background-attachment: fixed;
-  -webkit-background-size: cover;
   height: 100vh;
 }
 #image3 {
-  background: url('../img/background/tell_camellia_shelf.jpg');
-  background-repeat: no-repeat;
+  background-image: url('../img/background/tell_camellia_shelf.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-  -webkit-background-repeat: no-repeat;
-  -webkit-background-position: center;
-  -webkit-background-attachment: fixed;
-  -webkit-background-size: cover;
   height: 100vh;
 }
 
