@@ -642,15 +642,36 @@ form input:focus, form textarea:focus {
 .team-member {
   position: relative;
 }
+@media only screen and (max-width: 768px) {
+  .team-member img {
+    width: 100% !important;
+  }
+  .team-member-info {
+    height: auto !important;
+    text-align: center !important;
+  }
+}
 .team-member img {
   display: block;
-  max-height: 410px;
-  width: auto;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+.team-member-info {
+  background-color: #335442;
+  height: auto;
 }
 .team-member h1 {
   line-height: 0.8 !important;
+}
+.team-member p {
+  line-height: 1.8;
+}
+.title {
+  color: #c4a944 !important;
+  font-size: 1.3em;
 }
 
 /* contact */
