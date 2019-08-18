@@ -50,7 +50,7 @@ p {
   font-family: 'Ikaros Light';
   letter-spacing: 2px;
   line-height: 1.4;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 a {
   text-decoration: none !important;
@@ -107,6 +107,7 @@ hr {
 .image-heading-contact {
   background-image: url('../img/background/unsplash_img3.jpg');
   background-position: bottom;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat-y;
   position: relative;
@@ -115,6 +116,7 @@ hr {
 .image-heading-menu {
   background-image: url('../img/background/unsplash_img10.jpg');
   background-position: bottom;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat-y;
   position: relative;
@@ -123,6 +125,7 @@ hr {
 .image-heading-about {
   background-image: url('../img/background/unsplash_img16.jpg');
   background-position: center;
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: repeat-y;
   position: relative;
@@ -356,7 +359,7 @@ form input:focus, form textarea:focus {
   padding: 10px 20px !important;
 }
 
-.home, .subscription, .contact, .menu-section, .story {
+.home, .subscription, .menu-section, .message {
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -366,8 +369,8 @@ form input:focus, form textarea:focus {
 	left: 0;
 	height: 100%;
 	width: 100%;
-  -webkit-background-color: rgba(0, 0, 0, 0.4);
-	background-color: rgba(0, 0, 0, 0.4);
+  -webkit-background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.2);
 	z-index: 0;
 }
 .overlay-dark {
@@ -436,6 +439,10 @@ form input:focus, form textarea:focus {
   display: inline-block;
   padding-right: 0.3em;
   color: #92acb1 !important;
+  transition: 0.3s ease;
+}
+.nav-item.social a:hover {
+  color: #eee !important;
 }
 
 /* modal */
@@ -492,6 +499,7 @@ form input:focus, form textarea:focus {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 #image2 {
   background-image: url('../img/background/unsplash_img9.jpg');
@@ -499,6 +507,7 @@ form input:focus, form textarea:focus {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 #image3 {
   background-image: url('../img/background/tell_camellia_shelf.jpg');
@@ -506,26 +515,35 @@ form input:focus, form textarea:focus {
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 
-/* about */
-.about {
-  /* background-image: url('../img/patterns/TC_pattern_B2.jpg'); */
-  /* background-color: #fff; */
+/* story */
+.story {
   position: relative;
   color: #d7cfcd;
 }
-.about img {
+.story img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.about-content {
+.story-content {
   padding: 5rem 1.5rem;
 }
-.about-content p{
+.story-content p{
   text-align: center;
   line-height: 1.8;
+}
+
+/* about */
+.about {
+  position: relative;
+}
+.about-section {
+  background-color: rgba(74, 105, 85, 0.8);
+  outline: 2px solid #eee;
+  outline-offset: -1em;
 }
 
 /* menu */
@@ -625,16 +643,18 @@ form input:focus, form textarea:focus {
   position: relative;
 }
 .team-member img {
-  height: 550px;
-  max-height: 550px;
-  width: 100%;
-  height: 100%;
+  display: block;
+  max-height: 410px;
+  width: auto;
+  height: auto;
   object-fit: cover;
+}
+.team-member h1 {
+  line-height: 0.8 !important;
 }
 
 /* contact */
 .contact {
-  /* background-color: #335442; */
   color: #eee;
   position: relative;
   width: 100%;
@@ -642,11 +662,24 @@ form input:focus, form textarea:focus {
 .contact a {
   color: #eee;
 }
-.contact i {
-  font-size: 2.2em;
-}
 .contact p {
   font-size: 1em;
+}
+.contact-info {
+  background-color: rgba(74, 105, 85, 0.8);
+  outline: 2px solid #eee;
+  outline-offset: -1em;
+}
+.contact-info h2 {
+  font-size: 2.4em;
+  line-height: 1 !important;
+}
+.contact-info i {
+  font-size: 1.2em;
+}
+.contact-info a:hover {
+  color: #999;
+  transition: 0.3s ease;
 }
 
 /* location */
