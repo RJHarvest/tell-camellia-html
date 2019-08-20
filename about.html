@@ -23,11 +23,11 @@
     <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
     <link rel="manifest" href="img/icon/manifest.json">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 <body>
 
@@ -60,7 +60,7 @@
 
 
   <section class="image-heading-about center topSection" id="aboutUs">
-    <div class="overlay"></div>
+    <div class="overlay-heading"></div>
     <div class="container">
       <div class="row">
         <div class="col-md-6 offset-md-3 col-sm-12">
@@ -92,6 +92,35 @@
     </div>
   </section> -->
 
+  <section class="about center">
+    <div class="overlay"></div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="about-section p-3 m-4">
+          <div class="col-md-6 offset-md-3 col-sm-12 mt-5">
+            <h1 class="heading">Our Bar & Lounge</h1>
+            <hr>
+          </div>
+          <div class="col-md-12 col-sm-12 p-5" data-aos="fade-in" data-aos-delay="50" data-aos-duration="1000">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="team-member center">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 offset-md-3 col-sm-12 py-5">
+          <h1 class="heading">Meet the team</h1>
+          <hr>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="team-member pb-3 left">
     <div class="overlay"></div>
     <div class="container">
@@ -101,7 +130,7 @@
         </div>
         <div class="col-md-9 col-sm-12 p-5 my-auto team-member-info">
           <h1 class="heading">Sandeep Hathiramani</h1>
-          <p class="title mb-4">Founder</p>
+          <p class="title">Founder</p>
           <p>
             Hong Kong native and an acclaimed bar specialist, Sandeep is an established figure
             within the city's food and beverage community. Having won numerous awards, including
@@ -122,7 +151,7 @@
       <div class="row no-gutters h-100" data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000">
         <div class="col-md-9 col-sm-12 order-2 order-md-1 p-5 my-auto team-member-info">
           <h1 class="heading">Gagan Gurung</h1>
-          <p class="title mb-4">Founder & Bar Manager</p>
+          <p class="title">Founder & Bar Manager</p>
           <p>
             Award-winning bartender, started his career as a chef before earning his reputation
             behind the bar. His profound knowledge of food and drink flavour profiles and aptitude
@@ -180,31 +209,27 @@
   	</div>
   </section>
 
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.js"></script>
   <script src="js/jquery.parallax.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
+  <script src="js/smoothscroll.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/form-validation.min.js"></script>
-  <script src="js/myscript.js"></script>
+  <script src="js/myscript.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Ec_tiMlqdpz4q2MImVvq1VUha1jtPnU&callback=initMap"
   async defer></script>
   <script>
-  	var scroll_start = 0;
-  	var x = $('.topSection').outerHeight();
+  	let scroll_start = 0;
+    const x = $('.topSection').outerHeight();
   	$(document).scroll(function(){
   		scroll_start = $(this).scrollTop() + 80;
   		if (scroll_start < x) {
   			$('.navbar').css('background-color', 'transparent');
-  		}else {
-  			$('.navbar').css('background-color', 'rgba(2,56,33,0.8)');
+        return
   		}
+  		$('.navbar').css('background-color', 'rgba(2,56,33,0.8)');
   	});
   </script>
   </body>
 </html>
-

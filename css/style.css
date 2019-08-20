@@ -21,14 +21,6 @@ Author URL: www.rjgapasin.com
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Ikaros Regular';
-    src: url('../fonts/Ikaros-Regular.woff2') format('woff2'),
-         url('../fonts/Ikaros-Regular.woff') format('woff'),
-         url('../fonts/Ikaros.otf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 body {
   background-image: url('../img/patterns/TC_pattern_B2.jpg');
@@ -150,38 +142,7 @@ hr {
   font-size: 3.5em;
   color: #eee;
 }
-@media (max-width: 992px) { .rellax { transform: translate3d(0,0,0) !important; } }
-
-/* preloader section */
-.preloader  {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: none repeat scroll 0 0 #15321f;
-}
-.sk-spinner-pulse {
-  width: 200px;
-  height: 200px;
-}
-.sk-spinner-pulse img {
-  -webkit-animation: spin 4s linear 0s infinite;
-          animation: spin 4s linear 0s infinite;
-}
+/* @media (max-width: 992px) { .rellax { transform: translate3d(0,0,0) !important; } } */
 
 /* animation */
 @-webkit-keyframes fadeInLeftShort {
@@ -234,36 +195,6 @@ hr {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
-  }
-}
-@-webkit-keyframes arrowDown {
-  0%   {transform: translateY(-5px);}
-  50%  {transform: translateY(5px);}
-  100%  {transform: translateY(0px);}
-}
-@keyframes arrowDown {
-  0%   {transform: translateY(-5px);}
-  50%  {transform: translateY(5px);}
-  100%  {transform: translateY(0px);}
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
   }
 }
 .fadeInLeftShort {
@@ -338,28 +269,8 @@ form input:focus, form textarea:focus {
   filter: brightness(80%);
   color: #eee !important;
 }
-.button-secondary {
-  -webkit-background-color: #a79a6e !important;
-  background-color: #a79a6e !important;
-  color: #eee !important;
-  border: 2px solid #a79a6e;
-  transition: all 0.3s ease-in-out;
-  font-family: 'Ikaros Light';
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.button-secondary:hover {
-  transform: translateY(-3px);
-  /* -webkit-background-color: #a79a6e !important;
-  background-color: #a79a6e !important; */
-  filter: brightness(80%);
-  color: #eee !important;
-}
-.button-small {
-  padding: 10px 20px !important;
-}
 
-.home, .subscription, .menu-section, .message {
+.home, .subscription, .message {
   padding-top: 80px;
   padding-bottom: 80px;
 }
@@ -371,6 +282,16 @@ form input:focus, form textarea:focus {
 	width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.2);
 	background-color: rgba(0, 0, 0, 0.2);
+	z-index: -1;
+}
+.overlay-heading {
+  position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  -webkit-background-color: rgba(0, 0, 0, 0.4);
+	background-color: rgba(0, 0, 0, 0.4);
 	z-index: 0;
 }
 .overlay-dark {
@@ -389,11 +310,6 @@ form input:focus, form textarea:focus {
     max-height: 550px;
     clip-path: polygon(0 0, 100% 0%, 60% 100%, 0% 100%);
   }
-  .side-image-right {
-    height: 550px;
-    max-height: 550px;
-    clip-path: polygon(60% 0, 100% 0%, 100% 100%, 0% 100%);
-  }
 }
 @media only screen and (max-width: 768px) {
   .side-image {
@@ -406,6 +322,7 @@ form input:focus, form textarea:focus {
 .navbar {
   font-family: 'Ikaros Light' !important;
   font-size: 1em;
+  transition: 0.3s ease;
 }
 @media only screen and (min-width: 768px) {
   .navbar img {
@@ -420,7 +337,7 @@ form input:focus, form textarea:focus {
     width: 110%;
   }
   .navbar-collapse {
-    background-color: rgba(2,56,33,0.8);
+    background-color: rgba(2, 56, 33, 0.8);
   }
 }
 .navbar-nav .nav-item:not(:last-of-type):hover {
@@ -494,7 +411,7 @@ form input:focus, form textarea:focus {
   width: 7% !important;
 }
 #image1 {
-  background-image: url('../img/background/unsplash_img21.jpg');
+  background-image: url('../img/background/tell_camellia_shelf.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -510,7 +427,7 @@ form input:focus, form textarea:focus {
   width: 100vw;
 }
 #image3 {
-  background-image: url('../img/background/tell_camellia_shelf.jpg');
+  background-image: url('../img/background/unsplash_img21.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -541,17 +458,36 @@ form input:focus, form textarea:focus {
   position: relative;
 }
 .about-section {
-  background-color: rgba(74, 105, 85, 0.8);
+  background-color: rgba(74, 105, 85, 0.6);
   outline: 2px solid #eee;
   outline-offset: -1em;
+}
+.about-section p {
+  line-height: 1.8;
 }
 
 /* menu */
 .menu {
   position: relative;
-  -webkit-background-color: #fff;
-  background-color: #fff;
-  color: #15321f;
+}
+@media only screen and (max-width: 768px) {
+  .menu-image-left,
+  .menu-image-right {
+    padding: 0 !important;
+    max-height: 400px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .menu-image-left {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.5rem !important;
+  }
+  .menu-image-right {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem !important;
+  }
 }
 .menu img {
   width: 100%;
@@ -562,8 +498,13 @@ form input:focus, form textarea:focus {
   line-height: 1.5;
 }
 .menu-drinks-section {
-  margin-top: 40px;
-  padding: 0 70px;
+  background-color: rgba(74, 105, 85, 0.6);
+  width: 100%;
+  outline: 2px solid #eee;
+  outline-offset: -1em;
+}
+.menu-section .subheading {
+  color: #c4a944;
 }
 .drinks-category {
   border: 5px double #15321f;
@@ -576,22 +517,23 @@ form input:focus, form textarea:focus {
   margin-bottom: 40px;
 }
 .drinks-name {
-  color: #1a1a1d;
-  font-size: 1.3em;
+  color: #eee;
+  font-size: 1.1em;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 0.8 !important;
+  line-height: 1 !important;
+}
+.drinks-extra-info {
+  font-size: 1em !important;
 }
 .drinks-info {
-  color: #999;
+  color: #aaa;
   font-size: 1em;
-  line-height: 0.8 !important;
+  line-height: 1.2 !important;
 }
 
 /* drink */
 .drink {
-  /* background-image: url('../img/patterns/TC_pattern_B2.jpg'); */
-  /* background-color: #023821; */
   background-color: #335442;
   color: #eee;
   position: relative;
@@ -602,40 +544,11 @@ form input:focus, form textarea:focus {
 }
 .drink img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
 }
-.drink-section {
-  /* background-color: rgba(74, 105, 85, 0.6); */
-  /* background-color: rgba(125, 207, 205, 0.5); */
-  /* background-color: rgba(51, 84, 66, 0.6); */
-  /* height: 400px; */
-}
-.drink-section .col-md-8 {
-  background-color: rgba(74, 105, 85, 0.6);
-  /* outline: 2px solid #d7cfcd; */
-  outline: 2px solid #023821;
-  outline-offset: -1em;
-}
-.drink-section .col-md-4 {
-  background-color: rgba(74, 105, 85, 0.6);
-}
-
-/* team */
-.team {
-  position: relative;
-}
-.team-section {
-  background-color: rgba(74, 105, 85, 0.6);
-  height: 70vh;
-  max-height: 70vh;
-  padding: 70px;
-  outline: 2px solid #92acb1;
-  outline-offset: -1.5em;
-}
-.team-section img {
-  width: 100%;
-  height: 50vh;
+.drink .drink-section {
+  padding: 5rem 1.5em;
 }
 
 /* team member */
@@ -712,8 +625,7 @@ form input:focus, form textarea:focus {
 
 /* subscription */
 .subscription {
-  -webkit-background: url('../img/background/unsplash_img1.jpg');
-  background: url('../img/background/unsplash_img1.jpg');
+  background-image: url('../img/background/unsplash_img1.jpg');
   color: #eee;
   position: relative;
   -webkit-background-size: cover;
@@ -725,8 +637,7 @@ form input:focus, form textarea:focus {
 
 /* footer */
 footer {
-  -webkit-background-color: #023821;
-  /* background-color: #023821; */
+  -webkit-background-color: #335442;
   background-color: #335442;
   color: #eee;
   padding: 40px 0;

@@ -1,36 +1,31 @@
-// preloader
-$(window).load('', function(){
-    $('.preloader').fadeOut(500); // set duration in brackets
-});
-
 // ------- GOOGLE MAP ---- //
-let map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: { lat: 22.2822323, lng: 114.1524102 },
-    zoom: 20
-  });
-
-  const contentString = '<p class="color-secondary subheading">H CODE, LG / FLOOR, 45 POTTINGER STREET, CENTRAL</p>';
-
-  let infowindow = new google.maps.InfoWindow({
-    content: contentString,
-    maxWidth: 300
-  });
-
-  let marker = new google.maps.Marker({
-      position: { lat: 22.2822323, lng: 114.1524102 },
-      icon: 'img/icon/tell_camellia_marker.png',
-      title: "Tell Camellia"
-  });
-
-  // To add the marker to the map, call setMap();
-  marker.setMap(map);
-  infowindow.open(map, marker);
-  marker.addListener('click', () =>{
-    infowindow.open(map, marker);
-  });
-}
+// let map;
+// function initMap() {
+//   map = new google.maps.Map(document.getElementById('map'), {
+//     center: { lat: 22.2822323, lng: 114.1524102 },
+//     zoom: 20
+//   });
+//
+//   const contentString = '<p class="color-secondary subheading">H CODE, LG / FLOOR, 45 POTTINGER STREET, CENTRAL</p>';
+//
+//   let infowindow = new google.maps.InfoWindow({
+//     content: contentString,
+//     maxWidth: 300
+//   });
+//
+//   let marker = new google.maps.Marker({
+//       position: { lat: 22.2822323, lng: 114.1524102 },
+//       icon: 'img/icon/tell_camellia_marker.png',
+//       title: "Tell Camellia"
+//   });
+//
+//   // To add the marker to the map, call setMap();
+//   marker.setMap(map);
+//   infowindow.open(map, marker);
+//   marker.addListener('click', () =>{
+//     infowindow.open(map, marker);
+//   });
+// }
 
 $(function() {
 
@@ -43,18 +38,13 @@ $(function() {
 
   // ------- AOS animation ------ //
   AOS.init({
-    disable: false,
+    disable: 'mobile',
     startEvent: 'DOMContentLoaded',
     initClassName: 'aos-init',
     animatedClassName: 'aos-animate',
     easing: 'ease',
     offset: 200,
     once: true,
-  });
-
-  // ------- RELLAX ------ //
-  const rellax = new Rellax('.rellax', {
-    center: true,
   });
 
   // ------- JQUERY PARALLAX ---- //
@@ -104,11 +94,11 @@ $(function() {
           type: 'POST',
           url: 'script/subscribe.php',
           data: { email },
-          success: () => {
+          success: function() {
             $('#modal-message').append(successMessage);
             $('#modal').modal('show');
           },
-          error: () => {
+          error: function() {
             $('#modal-message').append(failureMessage);
             $('#modal').modal('show');
           }
@@ -150,11 +140,11 @@ $(function() {
           type: 'POST',
           url: 'script/message.php',
           data: { name, email, message },
-          success: () => {
+          success: function() {
             $('#modal-message').append(successMessage);
             $('#modal').modal('show');
           },
-          error: () => {
+          error: function() {
             $('#modal-message').append(failureMessage);
             $('#modal').modal('show');
           }

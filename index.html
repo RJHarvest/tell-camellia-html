@@ -23,11 +23,11 @@
     <link rel="icon" type="image/png" sizes="96x96" href="img/icon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/icon/favicon-16x16.png">
     <link rel="manifest" href="img/icon/manifest.json">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
 <body>
 
@@ -73,7 +73,7 @@
             <div class="row">
               <div class="col-md-8 offset-md-2 col-sm-12">
                 <div class="carousel-content">
-                  <h1 class="center animated fadeInLeftShort delay-300ms">Tea Inspired Cocktail Lounge</h1>
+                  <h1 class="center animated fadeInLeftShort delay-300ms">Tea Inspired Cocktail Bar</h1>
                   <p class="subheading animated fadeInRightShort delay-400ms">Newly opened cocktail bar in Central</p>
                   <p class="subheading animated fadeInRightShort delay-400ms">H Code, LG / Floor, 45 Pottinger Street, Central</p>
                 </div>
@@ -141,7 +141,7 @@
               The origins fall from Camellia Sinensis, the bush plant of Tea. It is a blend of contemporary style and
               timeless sophistication that shares the rich tea drinking traditions and different flavors of tea-producing countries.
             </p>
-            <a href="about.html#team"><button class="btn button-primary mx-auto">Meet the team</button></a>
+            <a href="about.html"><button class="btn button-primary mx-auto">Meet the team</button></a>
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@
   <section class="drink">
     <div class="container-fluid p-0 m-0">
       <div class="row no-gutters h-100">
-        <div class="col-md-6 col-sm-12 order-2 order-md-1 py-5 px-3 my-auto center" data-aos="fade-in" data-aos-delay="50" data-aos-duration="1000">
+        <div class="col-md-6 col-sm-12 order-2 order-md-1 drink-section my-auto center" data-aos="fade-in" data-aos-delay="50" data-aos-duration="1000">
           <h1 class="heading">Our Teas and Cocktails</h1>
           <hr>
           <p>
@@ -161,10 +161,10 @@
           <a href="menu.html"><button class="btn button-primary mx-auto">Drinks Menu</button></a>
         </div>
         <div class="col-md-3 col-sm-12 order-1 order-md-2">
-          <img src="img/background/unsplash_img7.jpg" alt="">
+          <img src="img/background/unsplash_img7.jpg" alt="Tell Camellia Sri Lanka Drink">
         </div>
-        <div class="col-md-3 col-sm-12 order-3 order-md-3">
-          <img src="img/background/unsplash_img19.jpg" alt="">
+        <div class="col-md-3 col-sm-12 order-3 order-md-3 d-none d-md-block">
+          <img src="img/background/unsplash_img19.jpg" alt="Tell Camellia Kenya Drink">
         </div>
       </div>
     </div>
@@ -276,31 +276,55 @@
   	</div>
   </section>
 
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.10.0/rellax.js"></script>
   <script src="js/jquery.parallax.min.js"></script>
-  <script src="js/smoothscroll.js"></script>
+  <script src="js/smoothscroll.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/form-validation.min.js"></script>
-  <script src="js/myscript.js"></script>
+  <script src="js/myscript.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Ec_tiMlqdpz4q2MImVvq1VUha1jtPnU&callback=initMap"
   async defer></script>
   <script>
-  	var scroll_start = 0;
-  	var x = $('.topSection').outerHeight();
+  	let scroll_start = 0;
+    const x = $('.topSection').outerHeight();
   	$(document).scroll(function(){
   		scroll_start = $(this).scrollTop() + 80;
   		if (scroll_start < x) {
   			$('.navbar').css('background-color', 'transparent');
-  		}else {
-  			$('.navbar').css('background-color', 'rgba(2,56,33,0.8)');
+        return
   		}
+  		$('.navbar').css('background-color', 'rgba(2,56,33,0.8)');
   	});
+    // ------- GOOGLE MAP ---- //
+    let map;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 22.2822323, lng: 114.1524102 },
+        zoom: 20
+      });
+
+      const contentString = '<p class="color-secondary subheading">H CODE, LG / FLOOR, 45 POTTINGER STREET, CENTRAL</p>';
+
+      let infowindow = new google.maps.InfoWindow({
+        content: contentString,
+        maxWidth: 300
+      });
+
+      let marker = new google.maps.Marker({
+          position: { lat: 22.2822323, lng: 114.1524102 },
+          icon: 'img/icon/tell_camellia_marker.png',
+          title: "Tell Camellia"
+      });
+
+      // To add the marker to the map, call setMap();
+      marker.setMap(map);
+      infowindow.open(map, marker);
+      marker.addListener('click', () =>{
+        infowindow.open(map, marker);
+      });
+    }
   </script>
   </body>
 </html>
-
