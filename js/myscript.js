@@ -32,7 +32,7 @@ $(function() {
   // ------- Carousel ---- //
   $('.carousel').carousel({
     touch: true,
-    interval: 3000,
+    interval: 4000,
     pause: false,
   });
 

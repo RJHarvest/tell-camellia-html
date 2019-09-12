@@ -115,7 +115,7 @@ hr {
   height: 60vh;
 }
 .image-heading-about {
-  background-image: url('../img/background/unsplash_img16.jpg');
+  background-image: url('../img/venue/TC_lamp.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -282,7 +282,17 @@ form input:focus, form textarea:focus {
 	width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.2);
 	background-color: rgba(0, 0, 0, 0.2);
-	z-index: -1;
+	/* z-index: -1; */
+}
+.overlay-light {
+  position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  -webkit-background-color: rgba(0, 0, 0, 0.2);
+	background-color: rgba(0, 0, 0, 0.2);
+	/* z-index: -1; */
 }
 .overlay-heading {
   position: absolute;
@@ -411,12 +421,13 @@ form input:focus, form textarea:focus {
   width: 7% !important;
 }
 #image1 {
-  background-image: url('../img/background/tell_camellia_shelf.jpg');
+  background-image: url('../img/venue/TC_interior.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   width: 100vw;
+  z-index: -99;
 }
 #image2 {
   background-image: url('../img/background/unsplash_img9.jpg');
@@ -427,7 +438,7 @@ form input:focus, form textarea:focus {
   width: 100vw;
 }
 #image3 {
-  background-image: url('../img/background/unsplash_img21.jpg');
+  background-image: url('../img/venue/TC_tea_shelf.jpg');
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -625,7 +636,7 @@ form input:focus, form textarea:focus {
 
 /* subscription */
 .subscription {
-  background-image: url('../img/background/unsplash_img1.jpg');
+  background-image: url('../img/cocktails/TC_T-Tonic_Rosemary&Lime.jpg');
   color: #eee;
   position: relative;
   -webkit-background-size: cover;
