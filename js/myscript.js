@@ -58,12 +58,12 @@ $(function() {
     $('#contact').parallax("100%", 0.1, 1.5);
   }
 
-  $('#image1').css('background-attachment', 'fixed');
-  $('#image2').css('background-attachment', 'fixed');
-  $('#image3').css('background-attachment', 'fixed');
-  $('#aboutUs').css('background-attachment', 'fixed');
-  $('#menu').css('background-attachment', 'fixed');
-  $('#contact').css('background-attachment', 'fixed');
+  //$('#image1').css('background-attachment', 'fixed');
+  //$('#image2').css('background-attachment', 'fixed');
+  //$('#image3').css('background-attachment', 'fixed');
+  //$('#aboutUs').css('background-attachment', 'fixed');
+  //$('#menu').css('background-attachment', 'fixed');
+  //$('#contact').css('background-attachment', 'fixed');
 
   if (window.innerWidth > 800 && window.innerHeight > 600) {
     initParallax();
