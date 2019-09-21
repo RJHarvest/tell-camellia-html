@@ -63,8 +63,6 @@ http://www.gnu.org/licenses/gpl.html
 					}
 
 					$this.css('backgroundPosition', xpos + " " + Math.round((firstTop - pos) * speedFactor) + "px");
-					console.log(pos);
-					console.log(firstTop);
 
 				});
 		}
