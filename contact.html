@@ -203,7 +203,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9Ec_tiMlqdpz4q2MImVvq1VUha1jtPnU&callback=initMap"
   async defer></script>
   <script>
-  	let scroll_start = 0;
+  	var scroll_start = 0;
     const x = $('.topSection').outerHeight();
   	$(document).scroll(function(){
   		scroll_start = $(this).scrollTop() + 80;
@@ -214,7 +214,7 @@
   		$('.navbar').css('background-color', 'rgba(2,56,33,0.8)');
   	});
     // ------- GOOGLE MAP ---- //
-    let map;
+    var map;
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 22.2822323, lng: 114.1524102 },
@@ -223,12 +223,12 @@
 
       const contentString = '<p class="color-secondary subheading">H CODE, LG / FLOOR, 45 POTTINGER STREET, CENTRAL</p>';
 
-      let infowindow = new google.maps.InfoWindow({
+      const infowindow = new google.maps.InfoWindow({
         content: contentString,
         maxWidth: 300
       });
 
-      let marker = new google.maps.Marker({
+      const marker = new google.maps.Marker({
           position: { lat: 22.2822323, lng: 114.1524102 },
           icon: 'img/icon/tell_camellia_marker.png',
           title: "Tell Camellia"
