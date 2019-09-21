@@ -1,38 +1,15 @@
-// ------- GOOGLE MAP ---- //
-// let map;
-// function initMap() {
-//   map = new google.maps.Map(document.getElementById('map'), {
-//     center: { lat: 22.2822323, lng: 114.1524102 },
-//     zoom: 20
-//   });
-//
-//   const contentString = '<p class="color-secondary subheading">H CODE, LG / FLOOR, 45 POTTINGER STREET, CENTRAL</p>';
-//
-//   let infowindow = new google.maps.InfoWindow({
-//     content: contentString,
-//     maxWidth: 300
-//   });
-//
-//   let marker = new google.maps.Marker({
-//       position: { lat: 22.2822323, lng: 114.1524102 },
-//       icon: 'img/icon/tell_camellia_marker.png',
-//       title: "Tell Camellia"
-//   });
-//
-//   // To add the marker to the map, call setMap();
-//   marker.setMap(map);
-//   infowindow.open(map, marker);
-//   marker.addListener('click', () =>{
-//     infowindow.open(map, marker);
-//   });
-// }
-
 $(function() {
 
   // ------- Carousel ---- //
   $('.carousel').carousel({
     touch: true,
     interval: 4000,
+    pause: false,
+  });
+
+  $('.carousel-drink').carousel({
+    touch: true,
+    interval: 2500,
     pause: false,
   });
 
