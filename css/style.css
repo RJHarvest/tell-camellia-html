@@ -97,27 +97,21 @@ hr {
 	height: 65vh;
 }
 .image-heading-contact {
-  background-image: url('../img/background/unsplash_img3.jpg');
-  background-position: bottom;
-  background-attachment: fixed;
+  background-image: url('../img/venue/TC_interior.jpg');
   background-size: cover;
   background-repeat: repeat-y;
   position: relative;
   height: 60vh;
 }
 .image-heading-menu {
-  background-image: url('../img/background/unsplash_img10.jpg');
-  background-position: bottom;
-  background-attachment: fixed;
+  background-image: url('../img/venue/TC_wine&tea_collection.jpg');
   background-size: cover;
   background-repeat: repeat-y;
   position: relative;
   height: 60vh;
 }
 .image-heading-about {
-  background-image: url('../img/venue/TC_lamp.jpg');
-  background-position: center;
-  background-attachment: fixed;
+  background-image: url('../img/about/team_photo.jpg');
   background-size: cover;
   background-repeat: repeat-y;
   position: relative;
@@ -294,6 +288,16 @@ form input:focus, form textarea:focus {
 	background-color: rgba(0, 0, 0, 0.2);
 	/* z-index: -1; */
 }
+.overlay-error {
+  position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+  -webkit-background-color: rgba(0, 0, 0, 0.35);
+	background-color: rgba(0, 0, 0, 0.35);
+	z-index: -1;
+}
 .overlay-heading {
   position: absolute;
 	top: 0;
@@ -423,16 +427,15 @@ form input:focus, form textarea:focus {
 #image1 {
   background-image: url('../img/venue/TC_interior.jpg');
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   width: 100vw;
   z-index: -99;
 }
 #image2 {
-  background-image: url('../img/background/unsplash_img9.jpg');
+  //background-image: url('../img/background/unsplash_img9.jpg');
+  background-image: url('../img/venue/TC_wine&tea_collection.jpg');
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -440,7 +443,6 @@ form input:focus, form textarea:focus {
 #image3 {
   background-image: url('../img/venue/TC_tea_shelf.jpg');
   background-position: center;
-  background-attachment: fixed;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -532,10 +534,10 @@ form input:focus, form textarea:focus {
   font-size: 1.1em;
   font-weight: bold;
   text-transform: uppercase;
-  line-height: 1 !important;
+  line-height: 1.2 !important;
 }
 .drinks-extra-info {
-  font-size: 1em !important;
+  font-size: 0.8em !important;
 }
 .drinks-info {
   color: #aaa;
@@ -545,7 +547,8 @@ form input:focus, form textarea:focus {
 
 /* drink */
 .drink {
-  background-color: #335442;
+  //background-color: #335442;
+  background-color: #023821;
   color: #eee;
   position: relative;
 }
@@ -649,7 +652,8 @@ form input:focus, form textarea:focus {
 /* footer */
 footer {
   -webkit-background-color: #335442;
-  background-color: #335442;
+  //background-color: #335442;
+  background-color: #023821;
   color: #eee;
   padding: 40px 0;
 }
@@ -707,4 +711,26 @@ footer h3 {
 }
 .copyright .heading {
   font-size: 1.8em !important;
+}
+
+/* 404 error page  */
+.error {
+  margin-top: 150px;
+}
+.error h1 {
+  font-size: 7em;
+  color: #fbfbfb;
+  line-height: 1.5 !important
+}
+.error h3 {
+  font-family: 'Ikaros Light';
+  font-weight: bold;
+  color: #c4a944;
+  font-size: 1.4em;
+  line-height: 2 !important;
+}
+.error-background {
+  background-image: url('../img/venue/TC_wine&tea_collection.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

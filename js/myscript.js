@@ -53,12 +53,26 @@ $(function() {
     $('#image1').parallax("100%", 0.2);
     $('#image2').parallax("100%", 0.2);
     $('#image3').parallax("100%", 0.2);
-    $('#aboutUs').parallax("100%", 0.1);
-    $('#menu').parallax("100%", 0.1);
-    $('#contact').parallax("100%", 0.1);
+    $('#aboutUs').parallax("100%", 0.1, 2);
+    $('#menu').parallax("100%", 0.1, 2.4);
+    $('#contact').parallax("100%", 0.1, 1.5);
   }
+
+  $('#image1').css('background-attachment', 'fixed');
+  $('#image2').css('background-attachment', 'fixed');
+  $('#image3').css('background-attachment', 'fixed');
+  $('#aboutUs').css('background-attachment', 'fixed');
+  $('#menu').css('background-attachment', 'fixed');
+  $('#contact').css('background-attachment', 'fixed');
+
   if (window.innerWidth > 800 && window.innerHeight > 600) {
     initParallax();
+    $('#image1').removeAttr('background-attachment');
+    $('#image2').removeAttr('background-attachment');
+    $('#image3').removeAttr('background-attachment');
+    $('#aboutUs').removeAttr('background-attachment');
+    $('#menu').removeAttr('background-attachment');
+    $('#contact').removeAttr('background-attachment');
   }
 
   // ------- form validation ---- //
