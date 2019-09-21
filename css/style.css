@@ -286,7 +286,7 @@ form input:focus, form textarea:focus {
 	width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.2);
 	background-color: rgba(0, 0, 0, 0.2);
-	/* z-index: -1; */
+	z-index: -1;
 }
 .overlay-error {
   position: absolute;
@@ -304,8 +304,8 @@ form input:focus, form textarea:focus {
 	left: 0;
 	height: 100%;
 	width: 100%;
-  -webkit-background-color: rgba(0, 0, 0, 0.4);
-	background-color: rgba(0, 0, 0, 0.4);
+  -webkit-background-color: rgba(0, 0, 0, 0.3);
+	background-color: rgba(0, 0, 0, 0.3);
 	z-index: 0;
 }
 .overlay-dark {
@@ -406,10 +406,11 @@ form input:focus, form textarea:focus {
 }
 
 /* carousel */
-.carousel {
+#carousel {
   height: 100vh !important;
 }
-.carousel-item {
+#carousel .carousel-item,
+.menu-image-left .carousel-drink .carousel-item {
   height: 100vh !important;
   width: 100%;
 }
@@ -489,6 +490,10 @@ form input:focus, form textarea:focus {
     padding: 0 !important;
     max-height: 400px;
   }
+  .menu-image-left img,
+  .menu-image-right img {
+    max-height: 400px;
+  }
 }
 @media only screen and (min-width: 768px) {
   .menu-image-left {
@@ -501,6 +506,11 @@ form input:focus, form textarea:focus {
     padding-bottom: 1.5rem;
     padding-right: 1.5rem !important;
   }
+}
+.menu-image-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .menu img {
   width: 100%;
