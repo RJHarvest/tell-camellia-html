@@ -601,7 +601,7 @@ form input:focus, form textarea:focus {
   height: auto;
 }
 .team-member h1 {
-  line-height: 0.8 !important;
+  line-height: 1 !important;
 }
 .team-member p {
   line-height: 1.8;
