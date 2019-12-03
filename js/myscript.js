@@ -7,6 +7,11 @@ $(function() {
     pause: false,
   });
 
+  $('.carousel-testimonial').carousel({
+    touch: true,
+    pause: true,
+  });
+
   $('.carousel-drink').carousel({
     touch: true,
     interval: 2500,

@@ -49,7 +49,10 @@ a {
   color: #eee;
 }
 a:hover {
-  color: #999;
+  color: #c4a944;
+}
+button a:hover {
+  color: #eee;
 }
 hr {
   border-top: 2px groove #c4a944 !important;
@@ -64,6 +67,10 @@ hr {
   -webkit-background-color: #eee;
   background-color: #eee;
   color: #023821;
+}
+.bgcolor-black {
+  -webkit-background-color: #000 !important;
+  background-color: #000 !important;
 }
 .color-primary {
   color: #d7cfcd;
@@ -270,53 +277,53 @@ form input:focus, form textarea:focus {
 }
 .overlay {
   position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.2);
-	background-color: rgba(0, 0, 0, 0.2);
-	/* z-index: -1; */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* z-index: -1; */
 }
 .overlay-light {
   position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.2);
-	background-color: rgba(0, 0, 0, 0.2);
-	z-index: -1;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 .overlay-error {
   position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.35);
-	background-color: rgba(0, 0, 0, 0.35);
-	z-index: -1;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: -1;
 }
 .overlay-heading {
   position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   -webkit-background-color: rgba(0, 0, 0, 0.3);
-	background-color: rgba(0, 0, 0, 0.3);
-	z-index: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 .overlay-dark {
   position: absolute;
-	top: 0;
-	left: 0;
-	height: 100%;
-	width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   -webkit-background-color: rgba(23, 37, 42, 0.85);
   background-color: rgba(34, 38, 41, 0.85);
-	z-index: 0;
+  z-index: 0;
 }
 @media only screen and (min-width: 768px) {
   .side-image {
@@ -409,8 +416,7 @@ form input:focus, form textarea:focus {
 #carousel {
   height: 100vh !important;
 }
-#carousel .carousel-item,
-.menu-image-left .carousel-drink .carousel-item {
+#carousel .carousel-item {
   height: 100vh !important;
   width: 100%;
 }
@@ -434,7 +440,6 @@ form input:focus, form textarea:focus {
   z-index: -99;
 }
 #image2 {
-  //background-image: url('../img/background/unsplash_img9.jpg');
   background-image: url('../img/venue/TC_wine&tea_collection.jpg');
   background-position: center;
   background-size: cover;
@@ -507,6 +512,9 @@ form input:focus, form textarea:focus {
     padding-right: 1.5rem !important;
   }
 }
+.menu-image-left .carousel-drink .carousel-item {
+  height: 110vh !important;
+}
 .menu-image-right img {
   width: 100%;
   height: 100%;
@@ -557,7 +565,6 @@ form input:focus, form textarea:focus {
 
 /* drink */
 .drink {
-  //background-color: #335442;
   background-color: #023821;
   color: #eee;
   position: relative;
@@ -636,7 +643,7 @@ form input:focus, form textarea:focus {
   font-size: 1.2em;
 }
 .contact-info a:hover {
-  color: #999;
+  color: #c4a944;
   transition: 0.3s ease;
 }
 
@@ -645,6 +652,79 @@ form input:focus, form textarea:focus {
   -webkit-background-color: #335442;
   background-color: #335442;
   color: #eee;
+}
+@media only screen and (max-width: 768px) {
+  .testimonial .slide {
+    height: 380px;
+    text-align: center !important;
+  }
+  .testimonial .slide .container-fluid {
+    padding-top: 0.75rem !important;
+  }
+}
+
+/* testimonial  */
+.testimonial {
+  background-image: url('../img/testimonial1.jpg');
+  position: relative;
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.testimonial .slide {
+  background-color: rgba(2, 56, 33, 0.7);
+  box-shadow: 0px 0px 5px #000;
+  outline: 1px solid #eee;
+  outline-offset: -0.8em;
+  margin-top: 0.65em !important;
+  margin-bottom: 0.65em !important;
+  //height: 35vh;
+}
+.testimonial .slide blockquote {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+.testimonial .slide p {
+  font-family: 'Komoda';
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: 6px;
+  color: #c4a944;
+}
+.testimonial .slide .image {
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  background-color: #fff;
+  overflow: hidden;
+}
+.testimonial .slide .image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+  width: 80%;
+}
+.testimonial .slide .quotes {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.slide-dots.ul, .slide-dots li {
+  display: inline;
+}
+.star {
+  font-size: 2em;
+}
+.star:after {
+  content: "\2605";
+  font-style: normal;
+}
+.star:not(:last-child) {
+  color: #D31A22;
 }
 
 /* subscription */
@@ -744,3 +824,4 @@ footer h3 {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
