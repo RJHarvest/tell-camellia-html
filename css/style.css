@@ -334,8 +334,8 @@ form input:focus, form textarea:focus {
 }
 @media only screen and (max-width: 768px) {
   .side-image {
-    height: 400px;
-    max-height: 400px;
+    height: 450px;
+    max-height: 450px;
   }
 }
 
