@@ -334,8 +334,8 @@ form input:focus, form textarea:focus {
 }
 @media only screen and (max-width: 768px) {
   .side-image {
-    height: 450px;
-    max-height: 450px;
+    height: 400px;
+    max-height: 400px;
   }
 }
 
@@ -459,6 +459,11 @@ form input:focus, form textarea:focus {
   position: relative;
   color: #d7cfcd;
 }
+@media only screen and (max-width: 768) {
+  .story img {
+    max-height: 400px;
+  }
+}
 .story img {
   width: 100%;
   height: 100%;
@@ -581,6 +586,11 @@ form input:focus, form textarea:focus {
 .drink .drink-section {
   padding: 5rem 1.5em;
 }
+@media only screen and (max-width: 768px) {
+  .drink img {
+    max-height: 450px;
+  }
+}
 
 /* team member */
 .team-member {
@@ -665,7 +675,7 @@ form input:focus, form textarea:focus {
 
 /* testimonial  */
 .testimonial {
-  background-image: url('../img/testimonial1.jpg');
+  background-image: url('../img/background/testimonial.jpg');
   position: relative;
   background-size: cover;
   background-position: top;
@@ -755,6 +765,14 @@ footer p {
 }
 footer h3 {
   font-size: 2.5em;
+}
+footer img {
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  footer img {
+    width: 85% !important;
+  }
 }
 
 /* social icons */
