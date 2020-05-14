@@ -281,8 +281,8 @@ form input:focus, form textarea:focus {
   left: 0;
   height: 100%;
   width: 100%;
-  -webkit-background-color: rgba(0, 0, 0, 0.2);
-  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   /* z-index: -1; */
 }
 .overlay-light {
