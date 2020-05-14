@@ -1,9 +1,7 @@
----
----
-
 # www.robotstxt.org/
 
 # Allow crawling of all content
 User-agent: *
-Disallow:{% if jekyll.environment != "production" %} /{% endif %}
+Allow: /
+
 Sitemap: https://www.tellcamellia.com/sitemap.xml
